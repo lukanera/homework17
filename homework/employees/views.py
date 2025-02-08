@@ -11,7 +11,7 @@ class ListCreateApiView(generics.ListAPIView,
 
     def perform_create(self, serializer):
         employee = serializer.save()
-        return Response({'message': f"Created new Employee: name: {employee.name}, email: {employee.email}, age: {employee.age}"})
+        print(f"Created new Employee: name: {employee.name}, email: {employee.email}, age: {employee.age}")
 
 
 class RetriveUpdateDestroyApiView(generics.RetrieveAPIView,
